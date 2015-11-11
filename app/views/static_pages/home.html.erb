@@ -1,0 +1,31 @@
+<h1>StaticPages#home</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+<style>
+html, body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+}
+ .gmap{max-width: 100%; display: block;
+		 background-color:#ededed; border:1px #dedede solid; padding:10px;
+		 border-radius:8px;-moz-border-radius:8px;-webkit-border-radius:8px;-khtml-border-radius:8px;
+		 height:250px;
+ }
+</style>
+<div class="row">
+		
+<div class="gmap" id="map"></div>
+</div>
+<script>
+
+var map;
+function initMap() {
+		map = new google.maps.Map(document.getElementById('map'), {
+center: {lat: -34.397, lng: 150.644},
+zoom: 8
+});
+}
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKLlDAY42F-jk0N6ZSV9ETf0EPmGGQE7M&callback=initMap" async defer></script>
+
